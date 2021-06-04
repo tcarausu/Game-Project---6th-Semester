@@ -105,7 +105,7 @@ public class HeartsHealthVisual : MonoBehaviour
 
         PauseMenu typeMenu = FindObjectsOfType<PauseMenu>()[0];
 
-        typeMenu.PauseGame();
+        typeMenu.DeadGame();
 
         Debug.Log("Finished Coroutine at timestamp : " + Time.time);
     }
