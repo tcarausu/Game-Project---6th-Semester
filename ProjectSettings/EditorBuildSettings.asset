@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 9ad8ca698de860a4da444afe6f24238a
+  - enabled: 1
+    path: Assets/Scenes/Prototype.unity
+    guid: de81435de64b64240a95a644b97fbe9c
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: f35c64dd2ea8bb440bb5dc0b4b951cd6
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/BasementStart.unity
+    guid: 08c5ae671b1768648a4426139ab2d7bf
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/BasementEmpty.unity
+    guid: ea9160642c2fe2d4bacf0d576e37b0c3
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/BasementEnd.unity
+    guid: 3d0b0ee8330e40e48a18f5afa9c169e2
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Room variations/BasementRoom01.unity
+    guid: 5fc7a6cb1e6c901439f078051e5eaed9
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Room variations/BasementRoom02.unity
+    guid: 9876a98e23b40ac409f80c5300de0f57
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Room variations/BasementRoom03.unity
+    guid: 9a9ad24f6a1566c45a378d551b372821
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Room variations/BasementRoom04.unity
+    guid: d6a5710d6cc30c34f89aa1949c2ef8b5
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Room variations/BasementRoom05.unity
+    guid: cf6bd952867b9b44a8499f0d709161f0
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Room variations/BasementRoom06.unity
+    guid: 014ed5e01bb7c654da2fc1b2925aa577
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Room variations/BasementRoom07.unity
+    guid: 2a7557e6dc2cc0440a906fcc0d177fd6
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Room variations/BasementRoom08.unity
+    guid: 00830ca0a3ffb5b41bddcfac203ebc16
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Room variations/BasementRoom09.unity
+    guid: 325dd45bc65b99d49b5fee54ba88baca
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Room variations/BasementRoom10.unity
+    guid: c3386bb0e16960442b9e08c507296358
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Room variations/BasementRoom11.unity
+    guid: 9a3b471f145337d4297501f0b36f28cb
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Room variations/BasementRoom12.unity
+    guid: ba68d4a804518c946b29a143eb8c7980
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Room variations/BasementRoom13.unity
+    guid: 8dd2be4225fd00440a6bafae825ba1ba
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Room variations/BasementRoom14.unity
+    guid: 3e5cdb23726f6534c80900c65e85c1bd
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Room variations/BasementRoom15.unity
+    guid: 1e38f3c579577774aa2feb7cf7e8a0f9
+  m_configObjects: {}
