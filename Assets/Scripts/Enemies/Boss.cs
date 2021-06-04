@@ -11,9 +11,12 @@ public class Boss : Enemy
     public Animator anim; 
     private int buffer, bufferMax = 240, recTime, recMax = 4000, recAttack = 0;
 
+    [SerializeField]
+    private GameObject pauseMenu;
+
     void Start()
     {
-        health = 150;
+        health = 15;
         maxHealth = health;
         speed = 0.05f;
         randSpeed = 0.005f;
@@ -86,6 +89,8 @@ public class Boss : Enemy
             this.GetComponent<BoxCollider2D>().enabled = false;
             this.GetComponent<CircleCollider2D>().enabled = false;
             this.GetComponent<Boss>().enabled = false;
+
+            pauseMenu.GetComponent<PauseMenu>().WonGame();
         }
         else /*if(!anim.GetBool("DeadDone"))*/ {
             anim.SetTrigger("IsDead");
