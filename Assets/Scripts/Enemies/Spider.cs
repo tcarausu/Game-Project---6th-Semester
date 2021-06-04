@@ -21,10 +21,13 @@ public class Spider : Enemy
         randSpeed = 0.005f;
         randRange = 2;
         web = Resources.Load("Prefabs/Enemies/Projectile/Web") as GameObject;
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     void Update()
     {
+        var lastPos = this.transform.position;
+        this.transform.position = new Vector3(lastPos.x, lastPos.y, 0);
         rig.velocity = new Vector2(0, 0);
         if(!moveOver) {
             //Debug.Log("Random Running");
@@ -73,7 +76,7 @@ public class Spider : Enemy
     public override void Attack(GameObject target)
     {
         GameObject projectile = Instantiate(web, this.transform.position, this.transform.rotation) as GameObject;
-        projectile.layer = 6;
+        projectile.layer = 11;
         projectile.GetComponent<Web>().target = player;
         buffer = 0;
     }

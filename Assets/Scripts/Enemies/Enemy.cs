@@ -13,6 +13,7 @@ public abstract class Enemy : MonoBehaviour
     public bool newMove = true;
     private float xRand, yRand;
     public Rigidbody2D rig;
+    private Vector3 lastfreePos;
 
     public abstract void Movement(GameObject target);
     public abstract void Attack(GameObject target);
@@ -68,15 +69,17 @@ public abstract class Enemy : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(this.transform.position, cast);
             //Debug.Log(hit.collider.gameObject.tag);
 
-            if (hit.collider.gameObject.tag == "Wall")
+            if (hit.collider.gameObject.tag == "Wall" || hit.collider.gameObject.tag == "Door")
             {
-                Debug.Log("Wall");
+                this.transform.position = lastfreePos;
+                //Debug.Log("Wall");
                 xRand = this.transform.position.x + Random.Range(-randRange, randRange);
                 yRand = this.transform.position.y + Random.Range(-randRange, randRange);
             }
 
             else
             {
+                lastfreePos = this.transform.position;
                 newMove = false;
             }
 

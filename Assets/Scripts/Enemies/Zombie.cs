@@ -7,6 +7,7 @@ public class Zombie : Enemy
 {
 
     private float dist, buffer, bufferMax;
+    private int attBuffer;
     private Vector3 dir;
     private bool moveOver;
     public GameObject origin;
@@ -17,13 +18,16 @@ public class Zombie : Enemy
         DefaultInit();
         health = 70;
         maxHealth = health;
-        speed = 0.05f;
+        speed = 0.010f;
         randSpeed = 0.005f;
         randRange = 3;
+        damage = 1;
     }
 
     void Update()
     {
+        var lastPos = this.transform.position;
+        this.transform.position = new Vector3(lastPos.x, lastPos.y, 0);
         animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
         animator.SetFloat("Vertical", Input.GetAxis("Vertical"));
         if (!moveOver)
@@ -43,17 +47,25 @@ public class Zombie : Enemy
             //Debug.Log(dist);
             dir = (target.transform.position - this.transform.position).normalized;
             this.transform.position += dir * speed * 1.2f;
+            attBuffer++;
         }
         else
         {
-            Attack(player);
+            if(attBuffer > 240) {
+                Attack(player);
+                attBuffer = 0;
+            }
+            else {
+                attBuffer++;
+            }
         }
 
     }
 
     public override void Attack(GameObject target)
     {
-
+        Debug.Log("Zomb attack!");
+        HeartsHealthVisual.heartsHealthSystemStatic.damage(damage);
     }
 
     private void OnCollisionStay2D(Collision2D other)

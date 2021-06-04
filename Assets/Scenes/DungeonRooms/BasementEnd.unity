@@ -215,6 +215,7 @@ GameObject:
   m_Component:
   - component: {fileID: 306736558}
   - component: {fileID: 306736559}
+  - component: {fileID: 306736560}
   m_Layer: 0
   m_Name: rock-monument
   m_TagString: Untagged
@@ -230,7 +231,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 306736557}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.03, y: 0.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1195701139}
@@ -287,6 +288,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!68 &306736560
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306736557}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.30204448, y: -2.4725192}
+  - {x: -0.12670591, y: -2.5617797}
+  - {x: -1.252465, y: -2.3644674}
+  - {x: -2.136167, y: -1.8348902}
+  - {x: -2.506732, y: -1.138039}
+  - {x: -2.513121, y: -0.19571164}
+  - {x: -1.9177101, y: 0.46876964}
+  - {x: -1.1579937, y: 0.6140898}
+  - {x: -1.0462155, y: 1.6183255}
+  - {x: -0.620666, y: 2.507185}
+  - {x: 0.18719089, y: 2.7757385}
+  - {x: 0.75005615, y: 2.4118576}
+  - {x: 1.1869161, y: 0.68795985}
+  - {x: 1.5891197, y: 0.63013995}
+  - {x: 2.7673404, y: -0.043388486}
+  - {x: 2.5125031, y: -1.7873507}
+  - {x: 0.16660309, y: -2.50484}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &664073659
 GameObject:
   m_ObjectHideFlags: 0
@@ -661,6 +699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorType: 2
+  doorCollider: {fileID: 0}
 --- !u!1 &1115598636
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,6 +746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorType: 0
+  doorCollider: {fileID: 0}
 --- !u!1 &1119833260
 GameObject:
   m_ObjectHideFlags: 0
@@ -845,10 +885,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e09b39d92031ae342a0a8facd965998e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Width: 25.2
-  Height: 14.18
+  Width: 25
+  Height: 14
   X: 0
   Y: 0
+  cleared: 0
   leftDoor: {fileID: 0}
   rightDoor: {fileID: 0}
   topDoor: {fileID: 0}
@@ -917,6 +958,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorType: 3
+  doorCollider: {fileID: 0}
 --- !u!1 &1517215962
 GameObject:
   m_ObjectHideFlags: 0
@@ -1045,6 +1087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorType: 1
+  doorCollider: {fileID: 0}
 --- !u!1 &1779406570
 GameObject:
   m_ObjectHideFlags: 0

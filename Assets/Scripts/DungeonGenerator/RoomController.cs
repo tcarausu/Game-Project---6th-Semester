@@ -23,6 +23,8 @@ public class RoomController : MonoBehaviour
 
     Room currRoom;
 
+    public Spawner spawnHandler;
+
     Queue<RoomInfo> loadRoomQueue = new Queue<RoomInfo>();
 
     public List<Room> loadedRooms = new List<Room>();
@@ -87,14 +89,14 @@ public class RoomController : MonoBehaviour
         if(loadRoomQueue.Count == 0)
         {
             Room bossRoom = loadedRooms[loadedRooms.Count - 1];
-            //Room tempRoom = new Room(bossRoom.X, bossRoom.Y);
-            GameObject tempRoom = GameObject.Instantiate(bossRoom.gameObject) as GameObject;
-            Room roomComp = tempRoom.GetComponent<Room>();
+            Room tempRoom = new Room(bossRoom.X, bossRoom.Y);
+            //GameObject tempRoom = GameObject.Instantiate(bossRoom.gameObject) as GameObject;
+            //Room roomComp = tempRoom.GetComponent<Room>();
             Destroy(bossRoom.gameObject);
             
-            var roomToRemove = loadedRooms.Single(r => r.X == roomComp.X && r.Y == roomComp.Y);
+            var roomToRemove = loadedRooms.Single(r => r.X == tempRoom.X && r.Y == tempRoom.Y);
             loadedRooms.Remove(roomToRemove);
-            LoadRoom("End", roomComp.X, roomComp.Y);
+            LoadRoom("End", tempRoom.X, tempRoom.Y);
         }
     }
 
@@ -170,5 +172,6 @@ public class RoomController : MonoBehaviour
     {
         CameraController.instance.currRoom = room;
         currRoom = room;
+        spawnHandler.GetComponent<Spawner>().enabled = true;
     }
 }
